@@ -18,44 +18,20 @@ require_once (ROOT. '/year.php');
 <!--</body>-->
 <!--</html>-->
 <?php
+
 function newLine()
 {
     echo "\n";
 }
 
-function myFun($a)
+function isTrue($var)
 {
-    echo $a + 1;
+    if ($var) {
+        echo "true";
+    } else {
+        echo "false";
+    }
     newLine();
 
 }
-
-//myFun(3);
-//myFun(4);
-/**
- * @param int $a
- * @param int $b
- * @param string $operation
- * @return int
- */
-function calculator(int $a, int $b, string $operation = "plus"): int
-{
-    if ($operation === 'plus') {
-        return $a + $b;
-    }
-    if ($operation === 'minus') {
-        return $a - $b;
-    }
-    return 0;
-}
-
-echo calculator(1, 2, 'minus');
-newLine();
-echo calculator(1, 2, 'plus');
-newLine();
-echo calculator(1, 2);
-newLine();
-echo calculator(1, 2.5, 'minus');
-newLine();
-echo calculator(1, 'text');
-newLine();
+isTrue($var);
