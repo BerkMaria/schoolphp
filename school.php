@@ -48,19 +48,36 @@ function newLine()
 
 
 
+//
+//function isTrue($var)
+//{
+//    if ($var) {
+//        return "true";
+//    } else {
+//        return "false";
+//    }
+//}
+//$var = true;
+//
+//$res = isTrue($var);
+//var_dump($res);
+//
+//$res = $var ? "true" : "false"; //аналогичная запись функции
+//var_dump($res);
 
-function isTrue($var)
+function ifNull($var)
 {
-    if ($var) {
-        return "true";
+    if ($var === null){
+        return "is null";
     } else {
-        return "false";
+        return $var;
     }
 }
-$var = true;
+$var = "something";
 
-$res = isTrue($var);
+$res = ifNull($var);
 var_dump($res);
 
-$res = $var ? "true" : "false"; //аналогичная запись функции
+$res = $var ?? "is null";
 var_dump($res);
+$var = null;
