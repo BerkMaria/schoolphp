@@ -23,15 +23,44 @@ function newLine()
 {
     echo "\n";
 }
+//$weather = ['sun', 'cloudy', 'rain',  'snow'];
+//function resolveActivity(string $weather)
+//{
+//    if ($weather === 'sun'){
+//        echo "beach";
+//        newLine();
+//    } else {
+//        echo "It is not";
+//        newLine();
+//        if ($weather === "snow") {
+//            echo "snowboard";
+//            newLine();
+//        }
+//    }
+//    if ($weather !== "rain") {
+//        echo "no rain";
+//        newLine();
+//    }
+//}
+
+//resolveActivity($weather[1]);
+
+
+
+
 
 function isTrue($var)
 {
     if ($var) {
-        echo "true";
+        return "true";
     } else {
-        echo "false";
+        return "false";
     }
-    newLine();
-
 }
-isTrue($var);
+$var = true;
+
+$res = isTrue($var);
+var_dump($res);
+
+$res = $var ? "true" : "false"; //аналогичная запись функции
+var_dump($res);
